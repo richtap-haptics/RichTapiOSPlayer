@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05535863284DF80E00CBE860 /* richlogo.he in Resources */ = {isa = PBXBuildFile; fileRef = 05535861284DF80E00CBE860 /* richlogo.he */; };
+		05535864284DF80E00CBE860 /* richlogo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 05535862284DF80E00CBE860 /* richlogo.mp4 */; };
+		057A868A284700840047D7EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A8689284700840047D7EB /* AppDelegate.swift */; };
+		057A868C284700840047D7EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A868B284700840047D7EB /* SceneDelegate.swift */; };
+		057A868E284700840047D7EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A868D284700840047D7EB /* ViewController.swift */; };
+		057A8691284700840047D7EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057A868F284700840047D7EB /* Main.storyboard */; };
+		057A8693284700850047D7EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057A8692284700850047D7EB /* Assets.xcassets */; };
+		057A8696284700850047D7EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057A8694284700850047D7EB /* LaunchScreen.storyboard */; };
+		057A86A1284700860047D7EB /* RichTapVideoPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A86A0284700860047D7EB /* RichTapVideoPlayerTests.swift */; };
+		057A86AB284700860047D7EB /* RichTapVideoPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A86AA284700860047D7EB /* RichTapVideoPlayerUITests.swift */; };
+		057A86AD284700860047D7EB /* RichTapVideoPlayerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A86AC284700860047D7EB /* RichTapVideoPlayerUITestsLaunchTests.swift */; };
+		057A86CA28474E4A0047D7EB /* RSPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A86C928474E490047D7EB /* RSPlayer.swift */; };
+		057A86CE2847517E0047D7EB /* HeaderFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A86CD2847517E0047D7EB /* HeaderFile.swift */; };
+		05E3C77F2853226E00EB6653 /* RichTapSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E3C77E2853226E00EB6653 /* RichTapSDK.framework */; };
+		05E3C7872853241C00EB6653 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E3C7862853241C00EB6653 /* libc++.1.tbd */; };
+		05E3C7892853242700EB6653 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E3C7882853242700EB6653 /* libc++.tbd */; };
+		05E3C78B2853243000EB6653 /* CoreHaptics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E3C78A2853243000EB6653 /* CoreHaptics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		057A869D284700860047D7EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 057A867E284700840047D7EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 057A8685284700840047D7EB;
+			remoteInfo = RichTapVideoPlayer;
+		};
+		057A86A7284700860047D7EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 057A867E284700840047D7EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 057A8685284700840047D7EB;
+			remoteInfo = RichTapVideoPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05535861284DF80E00CBE860 /* richlogo.he */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = richlogo.he; sourceTree = "<group>"; };
+		05535862284DF80E00CBE860 /* richlogo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = richlogo.mp4; sourceTree = "<group>"; };
+		057A8686284700840047D7EB /* RichTapVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RichTapVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		057A8689284700840047D7EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		057A868B284700840047D7EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		057A868D284700840047D7EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		057A8690284700840047D7EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		057A8692284700850047D7EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		057A8695284700850047D7EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		057A8697284700850047D7EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		057A869C284700860047D7EB /* RichTapVideoPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RichTapVideoPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		057A86A0284700860047D7EB /* RichTapVideoPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTapVideoPlayerTests.swift; sourceTree = "<group>"; };
+		057A86A6284700860047D7EB /* RichTapVideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RichTapVideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		057A86AA284700860047D7EB /* RichTapVideoPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTapVideoPlayerUITests.swift; sourceTree = "<group>"; };
+		057A86AC284700860047D7EB /* RichTapVideoPlayerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTapVideoPlayerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		057A86C928474E490047D7EB /* RSPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlayer.swift; sourceTree = "<group>"; };
+		057A86CD2847517E0047D7EB /* HeaderFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderFile.swift; sourceTree = "<group>"; };
+		05E3C77E2853226E00EB6653 /* RichTapSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RichTapSDK.framework; sourceTree = "<group>"; };
+		05E3C780285322DD00EB6653 /* RichTapVideoPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RichTapVideoPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
+		05E3C784285323B700EB6653 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		05E3C7862853241C00EB6653 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		05E3C7882853242700EB6653 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		05E3C78A2853243000EB6653 /* CoreHaptics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreHaptics.framework; path = System/Library/Frameworks/CoreHaptics.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		057A8683284700840047D7EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05E3C78B2853243000EB6653 /* CoreHaptics.framework in Frameworks */,
+				05E3C7892853242700EB6653 /* libc++.tbd in Frameworks */,
+				05E3C7872853241C00EB6653 /* libc++.1.tbd in Frameworks */,
+				05E3C77F2853226E00EB6653 /* RichTapSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		057A8699284700860047D7EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		057A86A3284700860047D7EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		057A867D284700840047D7EB = {
+			isa = PBXGroup;
+			children = (
+				057A8688284700840047D7EB /* RichTapVideoPlayer */,
+				057A869F284700860047D7EB /* RichTapVideoPlayerTests */,
+				057A86A9284700860047D7EB /* RichTapVideoPlayerUITests */,
+				057A8687284700840047D7EB /* Products */,
+				05E3C7852853241C00EB6653 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		057A8687284700840047D7EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				057A8686284700840047D7EB /* RichTapVideoPlayer.app */,
+				057A869C284700860047D7EB /* RichTapVideoPlayerTests.xctest */,
+				057A86A6284700860047D7EB /* RichTapVideoPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		057A8688284700840047D7EB /* RichTapVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				05E3C77E2853226E00EB6653 /* RichTapSDK.framework */,
+				057A86C828474E260047D7EB /* Player */,
+				057A8689284700840047D7EB /* AppDelegate.swift */,
+				057A868B284700840047D7EB /* SceneDelegate.swift */,
+				057A868D284700840047D7EB /* ViewController.swift */,
+				057A86CD2847517E0047D7EB /* HeaderFile.swift */,
+				057A868F284700840047D7EB /* Main.storyboard */,
+				057A8692284700850047D7EB /* Assets.xcassets */,
+				057A8694284700850047D7EB /* LaunchScreen.storyboard */,
+				057A8697284700850047D7EB /* Info.plist */,
+				05E3C780285322DD00EB6653 /* RichTapVideoPlayer-Bridging-Header.h */,
+				05E3C784285323B700EB6653 /* PrefixHeader.pch */,
+			);
+			path = RichTapVideoPlayer;
+			sourceTree = "<group>";
+		};
+		057A869F284700860047D7EB /* RichTapVideoPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				057A86A0284700860047D7EB /* RichTapVideoPlayerTests.swift */,
+			);
+			path = RichTapVideoPlayerTests;
+			sourceTree = "<group>";
+		};
+		057A86A9284700860047D7EB /* RichTapVideoPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				057A86AA284700860047D7EB /* RichTapVideoPlayerUITests.swift */,
+				057A86AC284700860047D7EB /* RichTapVideoPlayerUITestsLaunchTests.swift */,
+			);
+			path = RichTapVideoPlayerUITests;
+			sourceTree = "<group>";
+		};
+		057A86BB284702710047D7EB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				05535861284DF80E00CBE860 /* richlogo.he */,
+				05535862284DF80E00CBE860 /* richlogo.mp4 */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		057A86C828474E260047D7EB /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				057A86BB284702710047D7EB /* Resource */,
+				057A86C928474E490047D7EB /* RSPlayer.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		05E3C7852853241C00EB6653 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05E3C78A2853243000EB6653 /* CoreHaptics.framework */,
+				05E3C7882853242700EB6653 /* libc++.tbd */,
+				05E3C7862853241C00EB6653 /* libc++.1.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		057A8685284700840047D7EB /* RichTapVideoPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 057A86B0284700860047D7EB /* Build configuration list for PBXNativeTarget "RichTapVideoPlayer" */;
+			buildPhases = (
+				057A8682284700840047D7EB /* Sources */,
+				057A8683284700840047D7EB /* Frameworks */,
+				057A8684284700840047D7EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RichTapVideoPlayer;
+			productName = RichTapVideoPlayer;
+			productReference = 057A8686284700840047D7EB /* RichTapVideoPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		057A869B284700860047D7EB /* RichTapVideoPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 057A86B3284700860047D7EB /* Build configuration list for PBXNativeTarget "RichTapVideoPlayerTests" */;
+			buildPhases = (
+				057A8698284700860047D7EB /* Sources */,
+				057A8699284700860047D7EB /* Frameworks */,
+				057A869A284700860047D7EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				057A869E284700860047D7EB /* PBXTargetDependency */,
+			);
+			name = RichTapVideoPlayerTests;
+			productName = RichTapVideoPlayerTests;
+			productReference = 057A869C284700860047D7EB /* RichTapVideoPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		057A86A5284700860047D7EB /* RichTapVideoPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 057A86B6284700860047D7EB /* Build configuration list for PBXNativeTarget "RichTapVideoPlayerUITests" */;
+			buildPhases = (
+				057A86A2284700860047D7EB /* Sources */,
+				057A86A3284700860047D7EB /* Frameworks */,
+				057A86A4284700860047D7EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				057A86A8284700860047D7EB /* PBXTargetDependency */,
+			);
+			name = RichTapVideoPlayerUITests;
+			productName = RichTapVideoPlayerUITests;
+			productReference = 057A86A6284700860047D7EB /* RichTapVideoPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		057A867E284700840047D7EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					057A8685284700840047D7EB = {
+						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
+					};
+					057A869B284700860047D7EB = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 057A8685284700840047D7EB;
+					};
+					057A86A5284700860047D7EB = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 057A8685284700840047D7EB;
+					};
+				};
+			};
+			buildConfigurationList = 057A8681284700840047D7EB /* Build configuration list for PBXProject "RichTapVideoPlayer" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 057A867D284700840047D7EB;
+			productRefGroup = 057A8687284700840047D7EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				057A8685284700840047D7EB /* RichTapVideoPlayer */,
+				057A869B284700860047D7EB /* RichTapVideoPlayerTests */,
+				057A86A5284700860047D7EB /* RichTapVideoPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		057A8684284700840047D7EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				057A8696284700850047D7EB /* LaunchScreen.storyboard in Resources */,
+				05535863284DF80E00CBE860 /* richlogo.he in Resources */,
+				057A8693284700850047D7EB /* Assets.xcassets in Resources */,
+				05535864284DF80E00CBE860 /* richlogo.mp4 in Resources */,
+				057A8691284700840047D7EB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		057A869A284700860047D7EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		057A86A4284700860047D7EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		057A8682284700840047D7EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				057A86CE2847517E0047D7EB /* HeaderFile.swift in Sources */,
+				057A86CA28474E4A0047D7EB /* RSPlayer.swift in Sources */,
+				057A868E284700840047D7EB /* ViewController.swift in Sources */,
+				057A868A284700840047D7EB /* AppDelegate.swift in Sources */,
+				057A868C284700840047D7EB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		057A8698284700860047D7EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				057A86A1284700860047D7EB /* RichTapVideoPlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		057A86A2284700860047D7EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				057A86AB284700860047D7EB /* RichTapVideoPlayerUITests.swift in Sources */,
+				057A86AD284700860047D7EB /* RichTapVideoPlayerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		057A869E284700860047D7EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 057A8685284700840047D7EB /* RichTapVideoPlayer */;
+			targetProxy = 057A869D284700860047D7EB /* PBXContainerItemProxy */;
+		};
+		057A86A8284700860047D7EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 057A8685284700840047D7EB /* RichTapVideoPlayer */;
+			targetProxy = 057A86A7284700860047D7EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		057A868F284700840047D7EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				057A8690284700840047D7EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		057A8694284700850047D7EB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				057A8695284700850047D7EB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		057A86AE284700860047D7EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RichTapVideoPlayer/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yaozhizhong/RichTapVideoPlayer/RichTapVideoPlayer/RichTapVideoPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		057A86AF284700860047D7EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RichTapVideoPlayer/PrefixHeader.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yaozhizhong/RichTapVideoPlayer/RichTapVideoPlayer/RichTapVideoPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		057A86B1284700860047D7EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JWL562ZHFM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RichTapVideoPlayer",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RichTapVideoPlayer/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aac.RichTapVideoPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RichTapVideoPlayer/RichTapVideoPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		057A86B2284700860047D7EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JWL562ZHFM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RichTapVideoPlayer",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RichTapVideoPlayer/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aac.RichTapVideoPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RichTapVideoPlayer/RichTapVideoPlayer-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		057A86B4284700860047D7EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JWL562ZHFM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aac.RichTapVideoPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RichTapVideoPlayer.app/RichTapVideoPlayer";
+			};
+			name = Debug;
+		};
+		057A86B5284700860047D7EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JWL562ZHFM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aac.RichTapVideoPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RichTapVideoPlayer.app/RichTapVideoPlayer";
+			};
+			name = Release;
+		};
+		057A86B7284700860047D7EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JWL562ZHFM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aac.RichTapVideoPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RichTapVideoPlayer;
+			};
+			name = Debug;
+		};
+		057A86B8284700860047D7EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JWL562ZHFM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aac.RichTapVideoPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RichTapVideoPlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		057A8681284700840047D7EB /* Build configuration list for PBXProject "RichTapVideoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				057A86AE284700860047D7EB /* Debug */,
+				057A86AF284700860047D7EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		057A86B0284700860047D7EB /* Build configuration list for PBXNativeTarget "RichTapVideoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				057A86B1284700860047D7EB /* Debug */,
+				057A86B2284700860047D7EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		057A86B3284700860047D7EB /* Build configuration list for PBXNativeTarget "RichTapVideoPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				057A86B4284700860047D7EB /* Debug */,
+				057A86B5284700860047D7EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		057A86B6284700860047D7EB /* Build configuration list for PBXNativeTarget "RichTapVideoPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				057A86B7284700860047D7EB /* Debug */,
+				057A86B8284700860047D7EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 057A867E284700840047D7EB /* Project object */;
+}
