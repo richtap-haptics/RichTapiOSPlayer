@@ -37,9 +37,9 @@ class RSPlayer: UIView {
     var currentRateLabel : UILabel!
     /** slider定时器 */
     var progressTimer : Timer!
-    //记录播放结束
+    // 记录播放结束
     var isPlayEnd : Bool! = false
-    //当前Rate，默认1.0
+    // 当前Rate，默认1.0
     var currentRate : Float! = 1.0
     
     
@@ -75,17 +75,17 @@ class RSPlayer: UIView {
         progressTimer?.fireDate = Date()
     }
     
-    //开始播放
+    // 开始播放
     func startPlay() {
         player.play()
         player.rate = currentRate
-        //设置RichTapSDK的播放rate，尽量与播放器rate保持一致，否则会造成不同步
+        // 设置RichTap SDK的播放rate，与播放器保持一致
         do {
             try RichTapHapticUtils.setSpeed(currentRate)
         } catch {
         }
         setupTimer()
-        //RichTapSDK会根据播放器时间进行同步，需要在回调中传入播放器的当前时间
+        // RichTap SDK会根据播放器时间进行同步，需要在回调中传入播放器的当前时间
         RichTapHapticUtils.playHaptic(Bundle.main.path(forResource: "richlogo", ofType: "he")!, amplitude: 255, freq: 0, playProgress: {
             if (self.player != nil) {
                 return CMTimeGetSeconds((self.player!.currentTime()))
@@ -95,21 +95,21 @@ class RSPlayer: UIView {
         }, error: nil)
     }
     
-    //停止播放
-    func stopPlay(){
+    // 停止播放
+    func stopPlay() {
         player.pause()
         playOrPauseBtn.isSelected = false
         playOrPauseBtn.setTitle("Play", for: .normal)
         progressTimer.fireDate = Date.distantFuture
         isPlayEnd = true
-        //播放完毕后需要停止震动，再次播放重新开启
+        // 播放完毕后需要停止振动，再次播放重新开启
         RichTapHapticUtils.stop(nil)
     }
 
     /** 更新slider和timeLabel */
     @objc func updateProgressInfo() {
         guard let playerItem = playerItem else { return }
-        //视频当前的播放进度
+        // 视频当前的播放进度
         if playerItem.duration.timescale != 0 {
             let currentTime = CMTimeGetSeconds(self.player!.currentTime())
             let totalTime = TimeInterval(playerItem.duration.value) / TimeInterval(playerItem.duration.timescale)
@@ -129,8 +129,8 @@ class RSPlayer: UIView {
 
     /** 移除slider定时器 */
     func removeProgressTimer() {
-        progressTimer.fireDate = Date.distantFuture //暂停timer
-        //销毁定时器
+        progressTimer.fireDate = Date.distantFuture // 暂停timer
+        // 销毁定时器
         guard let aTimer = self.progressTimer else {
             return
         }
@@ -153,7 +153,7 @@ extension RSPlayer {
     func viewLayout() {
         
         playerLayer.frame = CGRect.init(x: 0, y: 100, width: self.width, height: 200)
-        //添加playerLayer
+        // 添加playerLayer
         self.layer.addSublayer(playerLayer)
         
         timeLabel = UILabel.init(frame: CGRect.init(x: 0, y: 320, width: 56, height: 30))
@@ -261,14 +261,14 @@ extension RSPlayer {
     
     @objc func playTimeSliderTouchUpInside(sender: UISlider) {
         progressTimer.fireDate = Date.distantPast
-        //计算当前slider拖动对应的播放时间
+        // 计算当前slider拖动对应的播放时间
         let currentTime = CMTimeGetSeconds((player.currentItem?.duration)!) * 1000 * Double(sender.value)
-        // 播放移动到当前播放时间
+        // 播放器跳到新的时间点
         self.player.seek(to: CMTimeMakeWithSeconds(currentTime, preferredTimescale: Int32(NSEC_PER_SEC)), toleranceBefore: CMTime.zero, toleranceAfter: CMTime.zero) {
             [unowned self] (isFinish) in
             self.player.play()
             self.player.rate = self.currentRate
-            //通过seek方法同步震动和播放器
+            // 通过seek方法将振动与播放器同步
             let millisecond = CMTimeGetSeconds((self.player.currentTime())) * 1000
             do {
                 try RichTapHapticUtils.seek(to: Int32(millisecond))
@@ -290,7 +290,7 @@ extension RSPlayer {
         if sender.isSelected == false {
             player.pause()
             playOrPauseBtn.setTitle("Play", for: .normal)
-            //暂停震动
+            // 暂停振动
             do {
                 try RichTapHapticUtils.pause()
             } catch {
