@@ -38,11 +38,12 @@ class RSPlayer: UIView {
     /** slider定时器 */
     var progressTimer : Timer!
     // 记录播放结束
-    var isPlayEnd : Bool! = false
+    var isPlayEnd : Bool = false
     // 当前Rate，默认1.0
-    var currentRate : Float! = 1.0
-    
-    
+    var currentRate : Float = 1.0
+    // 当前振动Id
+    var playId = 0
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.defaultBackgroundColor
@@ -62,7 +63,7 @@ class RSPlayer: UIView {
         let playerItem = object as! AVPlayerItem
         if keyPath == "status" {
             if playerItem.status == .readyToPlay {
-                print("readyToPlay")
+                
             } else {
                 
             }
@@ -79,20 +80,24 @@ class RSPlayer: UIView {
     func startPlay() {
         player.play()
         player.rate = currentRate
-        // 设置RichTap SDK的播放rate，与播放器保持一致
-        do {
-            try RichTapHapticUtils.setSpeed(currentRate)
-        } catch {
-        }
         setupTimer()
         // RichTap SDK会根据播放器时间进行同步，需要在回调中传入播放器的当前时间
-        RichTapHapticUtils.playHaptic(Bundle.main.path(forResource: "richlogo", ofType: "he")!, amplitude: 255, freq: 0, playProgress: {
+        var error: NSError?
+        playId = RichTapHapticUtils.playHaptic(Bundle.main.path(forResource: "richlogo", ofType: "he")!, amplitude: 255, freq: 0, playProgress: {
             if (self.player != nil) {
                 return CMTimeGetSeconds((self.player!.currentTime()))
             } else {
                 return 0
             }
-        }, error: nil)
+        }, error: &error)
+        if error != nil {
+            print("error = \(error.debugDescription)")
+        }
+        // 设置RichTap SDK的播放rate，与播放器保持一致
+        do {
+            try RichTapHapticUtils.setSpeed(currentRate, playID: playId)
+        } catch {
+        }
     }
     
     // 停止播放
@@ -103,7 +108,11 @@ class RSPlayer: UIView {
         progressTimer.fireDate = Date.distantFuture
         isPlayEnd = true
         // 播放完毕后需要停止振动，再次播放重新开启
-        RichTapHapticUtils.stop(nil)
+        do {
+            try RichTapHapticUtils.stop(playId)
+        } catch {
+        }
+        
     }
 
     /** 更新slider和timeLabel */
@@ -233,15 +242,6 @@ extension RSPlayer {
         
         player = AVPlayer.init(playerItem: playerItem)
         playerLayer = AVPlayerLayer.init(player: player)
-        /***
-         //设置视频的三种格式：
-         /** 按原视频比例显示，是竖屏的就显示出竖屏的，显示不完的留黑边 **/
-         AVLayerVideoGravity: resizeAspect
-         /** 以原比例拉伸视频，直到两边屏幕都占满，但视频内容有部分就被切割了 **/
-         AVLayerVideoGravity: resizeAspectFill
-         /** 不按原比例拉伸,拉伸视频内容达到边框占满 **/
-         AVLayerVideoGravity: resize
-         ***/
         playerLayer.videoGravity = .resize
     }
 }
@@ -266,14 +266,16 @@ extension RSPlayer {
         // 播放器跳到新的时间点
         self.player.seek(to: CMTimeMakeWithSeconds(currentTime, preferredTimescale: Int32(NSEC_PER_SEC)), toleranceBefore: CMTime.zero, toleranceAfter: CMTime.zero) {
             [unowned self] (isFinish) in
-            self.player.play()
-            self.player.rate = self.currentRate
-            // 通过seek方法将振动与播放器同步
-            let millisecond = CMTimeGetSeconds((self.player.currentTime())) * 1000
-            do {
-                try RichTapHapticUtils.seek(to: Int32(millisecond))
-            } catch let error{
-                print(error)
+            if isFinish{
+                self.player.play()
+                self.player.rate = self.currentRate
+                // 通过seek方法将振动与播放器同步
+                let millisecond = CMTimeGetSeconds((self.player.currentTime())) * 1000
+                do {
+                    try RichTapHapticUtils.seek(to: Int32(millisecond), playID: playId)
+                } catch let error{
+                    print(error)
+                }
             }
         }
     }
@@ -292,7 +294,7 @@ extension RSPlayer {
             playOrPauseBtn.setTitle("Play", for: .normal)
             // 暂停振动
             do {
-                try RichTapHapticUtils.pause()
+                try RichTapHapticUtils.pause(playId)
             } catch {
             }
             progressTimer.fireDate = Date.distantFuture
